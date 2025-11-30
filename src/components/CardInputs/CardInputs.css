@@ -1,0 +1,130 @@
+.ci-wrapper {
+    width: 100%;
+    max-width: 410px;
+}
+
+.ci-title {
+    font-family: "Geometria", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #9aa3b8;
+    margin-bottom: 12px;
+    text-align: left;
+}
+
+.ci-box {
+    width: 100%;
+    background: #d7e1f0;
+    padding: 20px 22px;
+    border-radius: 18px;
+    box-sizing: border-box;
+    text-align: left;
+    transition: background 0.35s ease-in-out, box-shadow 0.35s ease-in-out;
+}
+
+.ci-box:hover { background: #a5afc4; }
+
+.ci-box.active {
+    background: #8F6494;
+    box-shadow: 0 0 20px rgba(143, 100, 148, 0.35);
+}
+
+.ci-label {
+    color: #ffffff;
+    font-family: "Geometria", sans-serif;
+    font-size: 15px;
+    margin-bottom: 6px;
+    text-align: left;
+}
+
+.ci-col {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    flex: 1;
+}
+
+.ci-col.wide {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.ci-row.top {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.ci-row.bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 25%;
+}
+
+.ci-input {
+    height: 42px;
+    background: #ffffff;
+    border-radius: 10px;
+    border: none;
+    padding: 0 12px;
+    font-size: 15px;
+    font-family: "Geometria", sans-serif;
+    color: #3C4466;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.ci-input:focus {
+    outline: 2px solid #ffffffaa;
+}
+
+.ci-error {
+    color: #ff4d4d;
+    font-size: 13px;
+    margin-top: 5px;
+    font-family: "Geometria", sans-serif;
+}
+
+.ci-invalid {
+    border: 2px solid #ff4d4d !important;
+}
+
+@media (max-width: 1024px) {
+    .ci-wrapper {
+        padding-bottom: 15px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 700px) {
+    .ci-box {
+        padding: 18px;
+    }
+
+    .ci-row.top {
+        gap: 8px;
+    }
+
+    .ci-row.bottom {
+        gap: 20px;
+    }
+
+    .ci-title {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 500px) {
+    .ci-row.top {
+        flex-wrap: wrap;
+    }
+
+    .ci-row.top input {
+        width: calc(50% - 6px);
+    }
+
+    .ci-row.bottom {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

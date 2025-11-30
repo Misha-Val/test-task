@@ -1,0 +1,108 @@
+.pm-wrapper {
+    margin-bottom: 25px;
+    margin-top: 0;
+}
+
+.pm-title {
+    font-family: "Geometria", sans-serif;
+    font-size: 18px;
+    color: #9aa3b8;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.pm-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.pm-item {
+    background: #dbe2ef;
+    border: 1px solid #c7cfdd;
+    border-radius: 10px;
+    padding: 10px 14px;
+    height: 70px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    cursor: pointer;
+    color: white;
+
+    transition: background 0.45s ease-in-out,
+    border-color 0.45s ease-in-out,
+    box-shadow 0.45s ease-in-out;
+}
+
+.pm-item:hover:not(.active) {
+    background: #a5afc4;
+}
+
+.pm-item.active {
+    background: #8F6494;
+    border-color: #8F6494;
+    box-shadow: 0 0 12px rgba(143, 100, 148, 0.3);
+}
+
+.pm-item.active img {
+    filter: brightness(0) invert(1);
+}
+
+.pm-top {
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4px;
+}
+
+.pm-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.pm-icon {
+    width: 34px;
+    height: 34px;
+}
+
+.pm-privat-big {
+    font-family: "Geometria", sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    margin-top: 5%;
+}
+
+.pm-label {
+    font-family: "Geometria", sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    margin-top: auto;
+    opacity: 0.9;
+}
+
+@media (max-width: 900px) {
+    .pm-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 550px) {
+    .pm-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pm-item {
+        height: 80px;
+    }
+
+    .pm-icon {
+        width: 28px;
+        height: 28px;
+    }
+}

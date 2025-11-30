@@ -1,0 +1,137 @@
+
+.pi-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 50px;
+    gap: 30px;
+}
+
+.pi-left,
+.pi-right {
+    width: 38%;
+    display: flex;
+    flex-direction: column;
+}
+
+.pi-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 22px;
+}
+
+.pi-field label {
+    margin-bottom: 6px;
+    font-size: 15px;
+    color: #8a94a6;
+    font-family: "Geometria", sans-serif;
+}
+
+.pi-field input {
+    height: 46px;
+    border-radius: 12px;
+    background: #f5f7fc;
+    border: none;
+    padding: 0 14px;
+    font-size: 15px;
+
+    font-family: "Geometria", sans-serif;
+    color: #3C4466;
+
+    transition: box-shadow 0.3s ease-in-out, background 0.2s;
+}
+
+.pi-field input:hover,
+.pi-field input:focus {
+    box-shadow: 0 0 8px rgba(143, 100, 148, 0.4);
+    outline: none;
+}
+
+.pi-error {
+    color: #d04545;
+    font-size: 13px;
+    margin-top: 6px;
+    font-family: "Geometria", sans-serif;
+}
+
+.pi-row-short {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.pi-logo-row {
+    position: relative;
+}
+
+.long-field {
+    width: 100%;
+}
+
+.logo-btn {
+    position: absolute;
+    right: -90px;
+    bottom: 36px;
+    color: #3e6af1;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    font-family: "Geometria", sans-serif;
+}
+
+.logo-btn:hover {
+    color: #2b4ee2;
+    transform: translateY(-2px);
+    text-shadow: 0 0 6px rgba(62, 106, 241, 0.35);
+}
+
+.logo-btn:active {
+    transform: translateY(0px) scale(0.96);
+    text-shadow: 0 0 3px rgba(62, 106, 241, 0.2);
+}
+
+.logo-file-name {
+    font-size: 14px;
+    margin-top: 6px;
+    color: #3c4466;
+    font-family: "Geometria", sans-serif;
+    font-weight: 500;
+}
+
+@media (max-width: 1024px) {
+    .pi-row-short {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}
+
+@media (max-width: 900px) {
+    .pi-wrapper {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .pi-left,
+    .pi-right {
+        width: 100% !important;
+    }
+
+    .pi-logo-row {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .logo-btn {
+        position: static;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 500px) {
+    .pi-field input {
+        height: 42px;
+        font-size: 14px;
+    }
+}

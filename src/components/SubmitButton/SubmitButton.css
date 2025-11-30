@@ -1,0 +1,68 @@
+.submitBtn {
+    position: relative;
+    display: block;
+    margin: 30px auto 0;
+    padding: 18px 60px;
+
+    width: 360px;
+    text-align: center;
+
+    background: radial-gradient(
+            circle at 30% 40%,
+            #ff6b7d 0%,
+            #ff5568 40%,
+            #ff3d52 85%
+    );
+    border-radius: 16px;
+    border: none;
+    cursor: pointer;
+
+    font-weight: 700;
+    font-size: 20px;
+    font-family: "Geometria", sans-serif;
+    color: white;
+
+    box-shadow: 0px 4px 12px rgba(255, 85, 114, 0.35);
+    overflow: hidden;
+    transition: box-shadow 0.4s ease;
+}
+
+.submitBtn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(90deg, #ff5572, #9b4fce);
+    border-radius: inherit;
+
+    transition: transform 2.2s ease;
+    transform-origin: right center;
+    transform: scaleX(1);
+}
+
+.submitBtn:hover::before {
+    transform: scaleX(0);
+}
+
+.submitBtn:hover {
+    box-shadow:
+            0 0 18px rgba(255, 85, 114, 0.45),
+            0 0 32px rgba(255, 85, 114, 0.25);
+}
+
+.submitBtn span {
+    position: relative;
+    z-index: 2;
+}
+
+.submitBtn:active {
+    transform: scale(0.97);
+}
+
+@media (max-width: 480px) {
+    .submitBtn {
+        width: 100%;
+        padding: 16px 20px;
+        font-size: 18px;
+    }
+}
