@@ -70,7 +70,7 @@ const PersonalInfo: React.FC = () => {
         <form id="personal-info-form" className="pi-wrapper" onSubmit={handleSubmit(onSubmit)}>
             <div className="pi-left">
                 <div className="pi-row-short">
-                    <div className="pi-field">
+                    <div className="pi-field pi-field-name" >
                         <label>Ім’я</label>
                         <input {...register("firstName")} type="text" />
                         {errors.firstName && <p className="pi-error">{errors.firstName.message}</p>}
@@ -90,19 +90,22 @@ const PersonalInfo: React.FC = () => {
                         {errors.company && <p className="pi-error">{errors.company.message}</p>}
                     </div>
 
-                    <span className="logo-btn" onClick={() => fileInputRef.current?.click()}>
+                    <div className="logo-btn-wraper">
+                        <span className="logo-btn" onClick={() => fileInputRef.current?.click()}>
                         + Логотип
-                    </span>
+                        </span>
 
-                    <input
-                        type="file"
-                        accept="image/*"
-                        ref={fileInputRef}
-                        onChange={handleFileSelect}
-                        style={{ display: "none" }}
-                    />
+                        <input
+                            type="file"
+                            accept="image/*"
+                            ref={fileInputRef}
+                            onChange={handleFileSelect}
+                            style={{ display: "none" }}
+                        />
 
-                    {logoFile && <p className="logo-file-name">{logoFile.name}</p>}
+                        {logoFile && <p className="logo-file-name">{logoFile.name}</p>}
+                    </div>
+
                 </div>
 
                 <div className="pi-field">
@@ -126,7 +129,7 @@ const PersonalInfo: React.FC = () => {
                 </div>
 
                 <div className="pi-row-short">
-                    <div className="pi-field">
+                    <div className="pi-field pi-field-sity">
                         <label>Місто</label>
                         <input {...register("city")} type="text" />
                         {errors.city && <p className="pi-error">{errors.city.message}</p>}

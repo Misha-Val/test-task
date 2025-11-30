@@ -1,4 +1,3 @@
-
 .pi-wrapper {
     display: flex;
     justify-content: space-between;
@@ -34,10 +33,8 @@
     border: none;
     padding: 0 14px;
     font-size: 15px;
-
     font-family: "Geometria", sans-serif;
     color: #3C4466;
-
     transition: box-shadow 0.3s ease-in-out, background 0.2s;
 }
 
@@ -62,16 +59,25 @@
 
 .pi-logo-row {
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .long-field {
     width: 100%;
 }
 
-.logo-btn {
+.logo-btn-wraper {
     position: absolute;
-    right: -90px;
-    bottom: 36px;
+    top: 40%;
+    right: -200px;
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.logo-btn {
     color: #3e6af1;
     font-weight: 600;
     cursor: pointer;
@@ -92,18 +98,36 @@
 
 .logo-file-name {
     font-size: 14px;
-    margin-top: 6px;
+    margin-top: 10px;
     color: #3c4466;
     font-family: "Geometria", sans-serif;
     font-weight: 500;
+    word-break: break-word;
+    width: 100%;
+    max-width: 180px;
 }
 
 @media (max-width: 1024px) {
+
     .pi-row-short {
         grid-template-columns: 1fr;
-        gap: 16px;
     }
+
+    .pi-field-name {
+        margin-bottom: -2px;
+    }
+
+    .pi-field-sity {
+        margin-bottom: -2px;
+    }
+
+    .logo-btn-wraper {
+        right: -190px;
+    }
+
+
 }
+
 
 @media (max-width: 900px) {
     .pi-wrapper {
@@ -119,13 +143,19 @@
     .pi-logo-row {
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
     }
 
-    .logo-btn {
+    .logo-btn-wraper {
         position: static;
         margin-top: 10px;
-        margin-bottom: 10px;
+        width: 100%;
+        align-items: flex-start;
+    }
+
+    .logo-file-name {
+        width: 100%;
+        max-width: 100%;
+        text-align: left;
     }
 }
 
